@@ -1,0 +1,60 @@
+package practice;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class user{
+	   static int id;
+	   static String uname;
+
+	   user(String name, int id)
+	   {
+		   this.name = name;
+		   this.id = id;
+	   }
+
+
+
+ public  void create_Customer(String name , int  id)
+  		{
+	   	ArrayList<String> uname = new  ArrayList<String>();
+	   	ArrayList<Integer> uname_id  = new ArrayList<Integer>();
+	   	
+	   	uname.add(name);
+	   	uname_id.add(id);
+	   }  
+
+ 
+ public void add_product(String x)
+ {
+	   	ArrayList<String> product = new  ArrayList<String>();
+	   	
+	   	product.add(x);
+
+ }
+ 
+ public void  order(int x)
+ {
+	   	ArrayList<Integer> order_id  = new ArrayList<Integer>();
+	   	order_id.add(x);
+ }
+ 
+ 
+
+public static void main(String args[])
+	{
+		Scanner input =  new Scanner(System.in);	
+		String uname;
+		int id ;
+		uname = input.nextLine();
+		id = input.nextInt();
+		user user1 = new user(uname, id);
+		
+		user1.create_Customer(uname, id);
+		
+	}
+
+}
+
