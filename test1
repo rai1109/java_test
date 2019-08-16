@@ -1,0 +1,71 @@
+package practice;
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class Demo {
+
+	public static void main(String args[])throws Exception  {
+		
+		int[] a = {2, 4, 6, 11, 12, 10, 21,7};
+		int x = a.length;
+		int[] b = new int[x];
+		/*
+		 * Checking  prime number
+		 */
+		
+		for(int i= 0 ; i< x; i++ )
+		{
+			prime(a[i]);
+		}
+		
+}
+	
+public static void  prime(int num)
+	{  
+		if(num==2 || num ==3 || num==5 || num ==7 )
+			System.out.println(num);
+		
+		if(num >10)
+		{
+			int temp,temp1,val;
+			val= num;
+			temp = num%10;
+			num = num/10;
+			temp1 =temp + num ;
+			boolean x = check_prime(temp1);
+			
+			if(x)
+			{
+				System.out.println(val);
+			}
+			
+		}
+	}
+
+
+public static boolean check_prime(int num) {
+		
+		if(num==2 || num ==3 || num==5 || num ==7 )
+			return true;
+	
+
+		if(num >10)
+		{
+
+		for (int i= 2;i <Math.sqrt(num); i++)
+		{		
+				if(num % i != 0)
+				{
+					return true;
+				}
+			
+		}
+		
+			
+	}
+		return false; 
+}
+}
+
+	
+
